@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/nathanhettige/httprespond/internal/responses"
+)
 
 func main() {
-	fmt.Println("Hello World!")
+	router := gin.Default()
+
+	router.Any("/200", responses.TwoHundred)
+	router.Any("/400", responses.FourHundred)
+
+	router.Run(":3000")
 }
