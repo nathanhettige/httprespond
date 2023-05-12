@@ -9,6 +9,7 @@ func main() {
 	router := gin.Default()
 
 	router.Any("/200", responses.TwoHundred)
+	router.Any("/300", responses.ThreeHundred)
 	router.Any("/400", responses.FourHundred)
 
 	router.Run(":3000")
