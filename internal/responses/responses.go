@@ -12,7 +12,6 @@ func TwoHundred(c *gin.Context) {
 
 func ThreeHundred(c *gin.Context) {
 	c.String(http.StatusMultipleChoices, "Multiple Choices")
-
 }
 
 func FourHundred(c *gin.Context) {
